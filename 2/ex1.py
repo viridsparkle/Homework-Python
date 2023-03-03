@@ -20,6 +20,7 @@ for i in range(n):
         if list[i] == 1:
             list[i] = 0
             count += 1
+print(list)
 print(f"Минимальное количество монет, которые нужно перевернуть: {count}")
 
 
