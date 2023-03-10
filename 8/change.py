@@ -1,7 +1,7 @@
 from fill import fillData
 
 def change():
-    data = open('phones.csv', 'r', encoding = 'utf-8')
+    data = open('HW/8/phones.csv', 'r', encoding = 'utf-8')
     search_query = input('Введите поисковой запрос: ')
     list = []
     count = 0
@@ -16,13 +16,3 @@ def change():
         print('Данные отсутствуют')
     return list
 
-def rewrite_change():
-    newList = change()
-    with open ('phones.csv', 'w', encoding = 'utf-8') as data:
-        for i in range(len(newList)):
-            data.write(f'{newList[i]}\n')
-        data.close()
-    with open ('phones.txt', 'w', encoding = 'utf-8') as data:
-        for i in range(len(newList)):
-            data.write(f'{newList[i]}\n')
-        data.close()

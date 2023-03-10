@@ -1,5 +1,5 @@
 def search():
-    data = open('phones.csv', 'r', encoding = 'utf-8')
+    data = open('HW/8/phones.csv', 'r', encoding = 'utf-8')
     search_query = input('Введите поисковой запрос: ')
     flag = 1
     for line in data:

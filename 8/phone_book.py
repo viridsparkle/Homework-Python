@@ -11,8 +11,9 @@ from os.path import exists
 from create import create 
 from write import write_in_file
 from search import search
-from delete import rewrite
-from change import rewrite_change
+from delete import delete
+from change import change
+from rewrite import rewrite
 
 def menu():
     print('\n               Меню                  \n' +
@@ -24,7 +25,7 @@ def menu():
           'Нажмите 6, чтобы выйти из меню\n')
     enter = int(input('Введите цифру от 1 до 6: '))
     if enter == 1:
-        data = open('phones.csv', 'r', encoding = 'utf-8')
+        data = open('HW/8/phones.csv', 'r', encoding = 'utf-8')
         list = data.read()
         if len(list) == 0:
             print('Нет записей')
@@ -42,11 +43,11 @@ def menu():
         exit = input('Нажмите Enter, чтобы вернуться в главное меню')
         menu()
     elif enter == 4:
-        rewrite()
+        rewrite(delete())
         exit = input('Нажмите Enter, чтобы вернуться в главное меню')
         menu()
     elif enter == 5:
-        rewrite_change()
+        rewrite(change())
         exit = input('Нажмите Enter, чтобы вернуться в главное меню')
         menu()
     elif enter == 6:
