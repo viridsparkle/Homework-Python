@@ -57,8 +57,8 @@ def menu():
         exit = input('Нажмите Enter, чтобы вернуться в главное меню')
         menu()
 
-csv = exists('phones.csv')
-txt = exists('phones.txt')
+csv = exists('HW/8/phones.csv')
+txt = exists('HW/8/phones.txt')
 if not csv and not txt:
     create()
 menu()
